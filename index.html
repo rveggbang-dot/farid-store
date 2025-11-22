@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farid Store - Toko Online Terpercaya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <h1 class="logo">
+                    <i class="fas fa-store"></i>
+                    Farid Store
+                </h1>
+                <nav class="nav-menu">
+                    <a href="#home" class="nav-link active">Beranda</a>
+                    <a href="#products" class="nav-link">Produk</a>
+                    <a href="#about" class="nav-link">Tentang</a>
+                    <a href="#contact" class="nav-link">Kontak</a>
+                </nav>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Selamat Datang di Farid Store</h1>
+                <p class="hero-subtitle">Toko online terpercaya dengan produk berkualitas dan harga terjangkau</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToProducts()">Belanja Sekarang</button>
+                    <button class="btn btn-secondary" onclick="showCatalog()">Lihat Katalog</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Channels Section -->
+    <section class="info-section">
+        <div class="container">
+            <h2 class="section-title">Saluran Informasi</h2>
+            <p class="section-subtitle">Tetap terhubung dengan kami melalui berbagai saluran berikut</p>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Website Resmi</h3>
+                    <p>Kunjungi website kami secara berkala untuk mendapatkan update terbaru tentang produk dan promo spesial.</p>
+                    <button class="btn-card" onclick="visitWebsite()">Kunjungi Website</button>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Media Sosial</h3>
+                    <p>Ikuti akun media sosial Farid Store untuk konten eksklusif, giveaway, dan informasi real-time.</p>
+                    <button class="btn-card" onclick="followInstagram()">Follow Instagram</button>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Newsletter</h3>
+                    <p>Berlangganan newsletter kami untuk mendapatkan penawaran khusus langsung di email Anda.</p>
+                    <button class="btn-card" onclick="subscribeNewsletter()">Berlangganan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">Produk Terpopuler</h2>
+            <p class="section-subtitle">Temukan produk terbaik dengan kualitas premium</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Kaos Premium</h3>
+                    <p class="product-price">Rp 89.000</p>
+                    <p class="product-desc">Kaos dengan bahan cotton combed 30s yang nyaman dipakai</p>
+                    <button class="btn-product" onclick="buyProduct('Kaos Premium')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Case Handphone</h3>
+                    <p class="product-price">Rp 45.000</p>
+                    <p class="product-desc">Case anti gores dengan desain eksklusif dan berbagai pilihan</p>
+                    <button class="btn-product" onclick="buyProduct('Case Handphone')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Earphone Wireless</h3>
+                    <p class="product-price">Rp 150.000</p>
+                    <p class="product-desc">Earphone bluetooth dengan kualitas suara jernih dan baterai tahan lama</p>
+                    <button class="btn-product" onclick="buyProduct('Earphone Wireless')">Beli Sekarang</button>
+                </div>
+            </div>
+            
+            <div class="products-more">
+                <button class="btn btn-primary" onclick="showAllProducts()">Lihat Semua Produk</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Fitur Unggulan</h2>
+            <p class="section-subtitle">Nikmati pengalaman berbelanja yang lebih baik dengan fitur-fitur kami</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Katalog Lengkap</h3>
+                    <p>Ribuan produk berkualitas dengan deskripsi detail dan gambar yang jelas</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Pembayaran Aman</h3>
+                    <p>Berbagai metode pembayaran yang terjamin keamanannya untuk kenyamanan Anda</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Pengiriman Cepat</h3>
+                    <p>Proses pengiriman yang efisien dengan jangkauan ke seluruh Indonesia</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Layanan 24/7</h3>
+                    <p>Customer service siap membantu Anda kapan saja dengan respon yang cepat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <p class="section-subtitle">Butuh bantuan atau informasi lebih lanjut? Jangan ragu untuk menghubungi kami</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Alamat</h3>
+                            <p>Gang Haur Gading, Berau, Kalimantan Timur</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telepon</h3>
+                            <p><a href="tel:+6287887663185">+62 878-8766-3185</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:rveggbang@gmail.com">rveggbang@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/6287887663185" target="_blank">Chat via WhatsApp</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Kirim Pesan</h3>
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Alamat Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Pesan Anda" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Farid Store</h3>
+                    <p>Toko online terpercaya dengan berbagai produk berkualitas untuk kebutuhan sehari-hari.</p>
+                    <div class="social-links">
+                        <a href="#" onclick="followInstagram()"><i class="fab fa-instagram"></i></a>
+                        <a href="#" onclick="visitFacebook()"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/6287887663185" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Menu Cepat</h3>
+                    <ul>
+                        <li><a href="#home" onclick="scrollToSection('home')">Beranda</a></li>
+                        <li><a href="#products" onclick="scrollToSection('products')">Produk</a></li>
+                        <li><a href="#about" onclick="scrollToSection('about')">Tentang Kami</a></li>
+                        <li><a href="#contact" onclick="scrollToSection('contact')">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontak Kami</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Gang Haur Gading, Berau, Kaltim</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+6287887663185">+62 878-8766-3185</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:rveggbang@gmail.com">rveggbang@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Farid Store. Hak Cipta Dilindungi Fardev.</p>
+                <p class="powered-by">Powered By Jarr</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal untuk konfirmasi -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title">Informasi</h3>
+            <p id="modal-message">Pesan akan muncul di sini</p>
+            <button class="btn btn-primary" onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
